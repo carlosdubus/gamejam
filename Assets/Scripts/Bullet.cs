@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour {
 
     public float speed = 10f;
     public Vector3 direction;
+    public Gun gun;
 
 	// Use this for initialization
 	void Start () {

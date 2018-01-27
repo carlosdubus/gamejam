@@ -137,6 +137,7 @@ MonoBehaviour:
   bullet: {fileID: 1044473159794436, guid: 1f83e513c3b02054ea4c935768f0f0f6, type: 2}
   bulletSpeed: 10
   fireButton: 8192
+  charge: 0
 --- !u!1 &287319105
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +782,7 @@ MonoBehaviour:
   bullet: {fileID: 1044473159794436, guid: 1f83e513c3b02054ea4c935768f0f0f6, type: 2}
   bulletSpeed: 10
   fireButton: 2097152
+  charge: 1
 --- !u!1 &1063985410 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}

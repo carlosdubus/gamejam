@@ -7,6 +7,7 @@ public class Gun : MonoBehaviour {
     public GameObject bullet;
     public float bulletSpeed = 10f;
     public OVRInput.Button fireButton;
+    public int charge;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +26,6 @@ public class Gun : MonoBehaviour {
         
         bullet.speed = bulletSpeed;
         bullet.direction = -transform.up;
-
+        bullet.gun = this;
     }
 }

@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour {
 
     public GameObject target;
     public float speed = 20f;
-    public float charge = 1f;
+    public int charge;
 
 	// Use this for initialization
 	void Start () {
@@ -26,8 +26,9 @@ public class Enemy : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Bullet") {
-            Destroy(this.gameObject);
+        var bullet = other.GetComponent<Bullet>();
+        if(bullet != null && bullet.gun.charge == this.charge) {
+            Destroy(gameObject);
         }
     }
 }
