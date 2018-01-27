@@ -54,5 +54,5 @@ MonoBehaviour:
   player: {fileID: 0}
   rate: 2
   enemies:
-  - {fileID: 1577137542188356, guid: 752affb61924249c5943c638b5f63e56, type: 2}
-  - {fileID: 1117226593388060, guid: 6baaa61cb510843a392abce769d69690, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
