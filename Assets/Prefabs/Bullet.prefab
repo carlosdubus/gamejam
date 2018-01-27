@@ -24,9 +24,12 @@ GameObject:
   - component: {fileID: 95824783238989364}
   - component: {fileID: 199962878528493134}
   - component: {fileID: 198738301054191064}
+  - component: {fileID: 114266654029307512}
+  - component: {fileID: 65484544091708260}
+  - component: {fileID: 54049329678397174}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,6 +89,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1044473159794436}
   m_Mesh: {fileID: 4300000, guid: 29ed73435ebde234c9b1aee7b5b2b505, type: 3}
+--- !u!54 &54049329678397174
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1044473159794436}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65484544091708260
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1044473159794436}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.124476, y: 2.124476, z: 4.514011}
+  m_Center: {x: 0, y: 0, z: 1.1381435}
 --- !u!95 &95824783238989364
 Animator:
   serializedVersion: 3
@@ -103,6 +133,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114266654029307512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1044473159794436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055a9c304ef794ad282ec09ffaa48083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  direction: {x: 0, y: 0, z: 0}
 --- !u!198 &198738301054191064
 ParticleSystem:
   m_ObjectHideFlags: 1

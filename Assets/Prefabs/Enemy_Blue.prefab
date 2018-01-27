@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 199056774960297290}
   - component: {fileID: 198717403916058230}
   - component: {fileID: 114703846933345066}
+  - component: {fileID: 65321262246693198}
   m_Layer: 0
   m_Name: Enemy_Blue
   m_TagString: Untagged
@@ -118,6 +119,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1259787725818108}
   m_Mesh: {fileID: 4300000, guid: bcd8d4ac5c14e6c4d8ad77d9878813dd, type: 3}
+--- !u!65 &65321262246693198
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259787725818108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.180736, y: 3.180735, z: 3.065631}
+  m_Center: {x: 0, y: -0.0000005364418, z: 0.30727953}
 --- !u!108 &108436847406598014
 Light:
   m_ObjectHideFlags: 1

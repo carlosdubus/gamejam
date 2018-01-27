@@ -23,4 +23,11 @@ public class Enemy : MonoBehaviour {
             }
         }
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Bullet") {
+            Destroy(this);
+        }
+    }
 }

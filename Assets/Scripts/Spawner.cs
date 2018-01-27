@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour {
     public GameObject player;
     public float rate = 2f;
     float cooldown = 0;
-    public float Spawn_distance;
+    public float spawnDistance;
 
     public List<GameObject> enemies = new List<GameObject>();
 
@@ -28,7 +28,7 @@ public class Spawner : MonoBehaviour {
 
     void Spawn(){
         var prefab = enemies[Random.Range(0, enemies.Count)];
-        var pos = player.transform.position + Random.insideUnitSphere * Spawn_distance;
+        var pos = player.transform.position + Random.insideUnitSphere * spawnDistance;
         pos.y = Mathf.Abs(pos.y);
         pos.y = Mathf.Clamp(pos.y, 0f, 4f);
 
