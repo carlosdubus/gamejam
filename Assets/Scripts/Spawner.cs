@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour {
     public float rate = 2f;
     float cooldown = 0;
     public float spawnDistance;
+    public float maxY = 4f;
 
     public List<GameObject> enemies = new List<GameObject>();
 
@@ -28,9 +29,9 @@ public class Spawner : MonoBehaviour {
 
     void Spawn(){
         var prefab = enemies[Random.Range(0, enemies.Count)];
-        var pos = player.transform.position + Random.insideUnitSphere * spawnDistance;
+        var pos = player.transform.position + Random.onUnitSphere * spawnDistance;
         pos.y = Mathf.Abs(pos.y);
-        pos.y = Mathf.Clamp(pos.y, 0f, 4f);
+        pos.y = Mathf.Clamp(pos.y, 0f, maxY);
 
         var enemy = Instantiate(prefab, pos, Quaternion.identity) as GameObject;
         enemy.GetComponent<Enemy>().target = player;
