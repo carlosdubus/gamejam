@@ -118,6 +118,25 @@ NavMeshSettings:
 Transform:
   m_PrefabParentObject: {fileID: 462066, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
   m_PrefabInternal: {fileID: 421042928}
+--- !u!1 &267866562 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1439486327819838, guid: 75a96e028754b814ca197325de2cdb9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1285056321}
+--- !u!114 &267866566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 267866562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee661ee12d9c84697ad72d92b57ebc69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1044473159794436, guid: 1f83e513c3b02054ea4c935768f0f0f6, type: 2}
+  bulletSpeed: 10
+  fireButton: 8192
 --- !u!1 &287319105
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +258,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1819260307111426, guid: 58fc3cc1a9961e4489f37724ecf43892,
         type: 2}
+    - target: {fileID: 114275321326107542, guid: fc189902f4363480ab60d32e6800c162,
+        type: 2}
+      propertyPath: spawnDistance
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114275321326107542, guid: fc189902f4363480ab60d32e6800c162,
+        type: 2}
+      propertyPath: rate
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc189902f4363480ab60d32e6800c162, type: 2}
   m_IsPrefabParent: 0
@@ -733,6 +762,25 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &934064538 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1028344899098854, guid: 578e35c42b0269140bc12068ed4441d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1562129442}
+--- !u!114 &934064542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 934064538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee661ee12d9c84697ad72d92b57ebc69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1044473159794436, guid: 1f83e513c3b02054ea4c935768f0f0f6, type: 2}
+  bulletSpeed: 10
+  fireButton: 2097152
 --- !u!1 &1063985410 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
@@ -1306,6 +1354,10 @@ Prefab:
     - target: {fileID: 400000, guid: ef8b0d65401e03f4d852a34b1d091fcd, type: 3}
       propertyPath: m_LocalScale.z
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ef8b0d65401e03f4d852a34b1d091fcd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef8b0d65401e03f4d852a34b1d091fcd, type: 3}

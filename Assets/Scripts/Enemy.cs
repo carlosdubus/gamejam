@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour {
         if(target != null) {
             transform.LookAt(target.transform);
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
-            if(transform.position == target.transform.position) {
+            if(Vector3.Distance(transform.position, target.transform.position) < 1f) {
                 Destroy(gameObject);
             }
         }
@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Bullet") {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
