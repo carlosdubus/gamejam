@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 23990468066466666}
   - component: {fileID: 199056774960297290}
   - component: {fileID: 198717403916058230}
+  - component: {fileID: 114703846933345066}
   m_Layer: 0
   m_Name: Enemy_Blue
   m_TagString: Untagged
@@ -52,14 +53,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1259787725818108}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 9.864394, y: 11.988785, z: 9.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4682435293424128}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
 --- !u!4 &4682435293424128
 Transform:
   m_ObjectHideFlags: 1
@@ -153,6 +154,20 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114703846933345066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259787725818108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96dff7169c16e421880c669764f1e7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 20
+  charge: 1
 --- !u!198 &198717403916058230
 ParticleSystem:
   m_ObjectHideFlags: 1

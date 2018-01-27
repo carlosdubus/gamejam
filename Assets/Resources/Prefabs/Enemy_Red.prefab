@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 23124496130334954}
   - component: {fileID: 199526667168307310}
   - component: {fileID: 198638619363306092}
+  - component: {fileID: 114390923510597354}
   m_Layer: 0
   m_Name: Enemy_Red
   m_TagString: Untagged
@@ -153,6 +154,20 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114390923510597354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1819260307111426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96dff7169c16e421880c669764f1e7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 20
+  charge: 1
 --- !u!198 &198638619363306092
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -213,7 +228,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1827639482
+  randomSeed: -241930277
   InitialModule:
     serializedVersion: 3
     enabled: 1
