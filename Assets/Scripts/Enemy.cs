@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour {
         var bullet = other.GetComponent<Bullet>();
         if(bullet != null && bullet.gun.charge == this.charge) {
             Destroy(gameObject);
+            Destroy(bullet.gameObject);
         }
     }
 }
