@@ -23,7 +23,7 @@ public class RadarWave : MonoBehaviour
         if(collider.radius >= maxRadius) {
             Destroy(gameObject);
         }
-
+        this.gameObject.transform.localScale = new Vector3(collider.radius-1, collider.radius-1, collider.radius-1);
     }
 
     private void OnTriggerEnter(Collider other)
