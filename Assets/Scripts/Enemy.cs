@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public GameObject explodenemy;
     bool once = false;
     public GameObject child;
+    public AudioSource locationSound;
 
     Vector3 pos;
 
@@ -75,5 +76,11 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         Destroy(this.gameObject);
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.position, 2f);
     }
 }
