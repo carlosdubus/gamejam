@@ -9,45 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1439486327819838}
+  m_RootGameObject: {fileID: 1466573892659870}
   m_IsPrefabParent: 1
---- !u!1 &1439486327819838
+--- !u!1 &1466573892659870
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4363087477959588}
-  - component: {fileID: 33825325492565278}
-  - component: {fileID: 23345437968708686}
-  - component: {fileID: 114023355074296612}
+  - component: {fileID: 4279123174442742}
+  - component: {fileID: 33318399647132970}
+  - component: {fileID: 23948070161190464}
+  - component: {fileID: 114268004191696828}
+  - component: {fileID: 114490017913430518}
   m_Layer: 0
-  m_Name: gun_red
-  m_TagString: Untagged
+  m_Name: Portal
+  m_TagString: ForceField
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4363087477959588
+--- !u!4 &4279123174442742
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1439486327819838}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.100000024, z: 0.07}
-  m_LocalScale: {x: 0.15, y: 0.15000018, z: 0.15000018}
+  m_GameObject: {fileID: 1466573892659870}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 7.27}
+  m_LocalScale: {x: 4, y: 0.1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!23 &23345437968708686
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23948070161190464
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1439486327819838}
+  m_GameObject: {fileID: 1466573892659870}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,8 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: df498a20b9cde8f4c97c2a5cd97edc9a, type: 2}
-  - {fileID: 2100000, guid: f6ad89b8b3382334b88cc6072f6c7f94, type: 2}
+  - {fileID: 2100000, guid: 898f73b9385364543b525ff95f41a47b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
+  m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
@@ -77,28 +77,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33825325492565278
+--- !u!33 &33318399647132970
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1439486327819838}
-  m_Mesh: {fileID: 4300000, guid: 19c487e8e562ede4fa90a26107c4a156, type: 3}
---- !u!114 &114023355074296612
+  m_GameObject: {fileID: 1466573892659870}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114268004191696828
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1439486327819838}
+  m_GameObject: {fileID: 1466573892659870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee661ee12d9c84697ad72d92b57ebc69, type: 3}
+  m_Script: {fileID: 11500000, guid: 840650714dd2a0343b4d7a8bc61902ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1044473159794436, guid: 1f83e513c3b02054ea4c935768f0f0f6, type: 2}
-  bulletSpeed: 10
-  fireButton: 8192
-  charge: 0
-  maxAmmo: 5
-  reloadTime: 1
-  ammo: 0
+  material: {fileID: 2100000, guid: 5c89c809778faf84fa8368be9dd7c761, type: 2}
+  initialColor: {r: 0.16078432, g: 0.16470589, b: 0.9098039, a: 1}
+--- !u!114 &114490017913430518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1466573892659870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16c4045dceb06349bcfaa8cff16154a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
+  time: 4

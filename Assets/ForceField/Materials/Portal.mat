@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ForceField
+  m_Name: Portal
   m_Shader: {fileID: 4800000, guid: 94e3bb0247185f842a5153fe0cd6ef74, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -27,9 +27,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _DistortStrength: 1.3483413e-18
-    - _DistortTimeFactor: 0.39
-    - _IntersectPower: 0.00993399
-    - _RimStrength: 0.5
+    - _DistortStrength: 1
+    - _DistortTimeFactor: 0.41
+    - _IntersectPower: 0
+    - _RimStrength: 0
     m_Colors:
-    - _Color: {r: 0.1774579, g: 0.16143355, b: 0.8917281, a: 1}
+    - _Color: {r: 0.19280718, g: 0.15842105, b: 0.87508756, a: 1}
