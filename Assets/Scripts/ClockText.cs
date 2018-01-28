@@ -14,11 +14,17 @@ public class ClockText : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+
+        time = Mathf.Clamp(time, 0f, 20f);
+
         var minutes = Mathf.Floor(time / 60f);
         var seconds = (int)time % 60;
 
         textMesh.text = string.Format("{0}:{1:00}", minutes, seconds);
         time -= Time.deltaTime;
+
+        if (time <= 0f) {
+            Debug.Log("WIN");
+        }
 	}
 }
