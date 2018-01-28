@@ -15,6 +15,10 @@ public class EnemyRadar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (GameState.state != "Running")
+        {
+            return;
+        }
         cooldown -= Time.deltaTime;
         if (cooldown <= 0f) {
             Instantiate(wave, transform.position, Quaternion.identity);

@@ -20,6 +20,10 @@ public class Spawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(GameState.state != "Running")
+        {
+            return;
+        }
         rate = Mathf.Lerp(rate, 3f, Time.deltaTime * 0.01f);
         cooldown -= Time.deltaTime;
         if (cooldown <= 0f) {

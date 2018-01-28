@@ -14,6 +14,8 @@ public class Gun : MonoBehaviour {
     public int ammo;
     float cooldown = 0f;
 
+    public OculusHaptics haptics;
+
 	// Use this for initialization
 	void Start () {
         ammo = maxAmmo;
@@ -22,7 +24,7 @@ public class Gun : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        cooldown -= Time.deltaTime;
+        cooldown -= Time.deltaTime * 0.8f;
         if (cooldown <= 0f) {
             ammo += 1;
             cooldown = reloadTime;
@@ -36,8 +38,12 @@ public class Gun : MonoBehaviour {
 
     void Fire() {
         if (ammo <= 0) {
+            //Play CUCUCU
+            GetComponent<AudioSource>().Play();
             return;
         }
+        haptics.Vibrate(VibrationForce.Hard);
+        //StartCoroutine(haptics.VibrateTime(VibrationForce.Hard, 0.5f));
         cooldown = reloadTime;
         ammo -= 1;
         var bullet = (Instantiate(this.bullet, transform.position, Quaternion.identity) as GameObject).GetComponent<Bullet>();

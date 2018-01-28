@@ -21,6 +21,12 @@ public class ClockText : MonoBehaviour {
         var seconds = (int)time % 60;
 
         textMesh.text = string.Format("{0}:{1:00}", minutes, seconds);
+
+        if(GameState.state != "Running")
+        {
+            return;
+        }
+
         time -= Time.deltaTime;
 
         if (time <= 0f) {

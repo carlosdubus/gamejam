@@ -9,21 +9,31 @@ public class RadarWave : MonoBehaviour
     public SphereCollider collider;
     public GameObject sound;
 
+    Renderer renderer;   
+
     // Use this for initialization
     void Start()
     {
-
+        renderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Color color = renderer.material.color;
+        color.a -= 0.1f;
+        color.a = Mathf.Clamp01(color.a);
+        renderer.material.color = color;
+
+        //Debug.Log(material.color);
+
         collider.radius += Time.deltaTime * (maxRadius / duration);
         collider.radius = Mathf.Clamp(collider.radius, 0.5f, maxRadius);
         if(collider.radius >= maxRadius) {
             Destroy(gameObject);
         }
-        this.gameObject.transform.localScale = new Vector3(collider.radius-1, collider.radius-1, collider.radius-1);
+        var scale = Mathf.Clamp(collider.radius - 1.7f, 0f, 100f);
+        this.gameObject.transform.localScale = new Vector3(scale, scale, scale);
     }
 
     private void OnTriggerEnter(Collider other)
