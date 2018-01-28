@@ -21,6 +21,7 @@ public class Gun : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
         cooldown -= Time.deltaTime;
         if (cooldown <= 0f) {
             ammo += 1;
