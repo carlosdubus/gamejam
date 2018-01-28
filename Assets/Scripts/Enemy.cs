@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour {
 
     Vector3 pos;
 
+    bool dead = false;
+
 	// Use this for initialization
 	void Start () {
         pos = transform.position;
@@ -21,6 +23,11 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(dead)
+        {
+            transform.localScale -= Vector3.one * Time.deltaTime;
+            return;
+        }
         if(target == null) {
             return;
         }
@@ -31,9 +38,9 @@ public class Enemy : MonoBehaviour {
         transform.position = pos + sinAxis * Mathf.Sin(Time.time * sinFrequency) * sinMagnitude;
         transform.forward = (transform.position - oldPos).normalized;
 
-        if(Vector3.Distance(transform.position, target.transform.position) < 1f) {
-            Destroy(gameObject);
-        }
+        //if(Vector3.Distance(transform.position, target.transform.position) < 1f) {
+        //    Destroy(gameObject);
+        //}
 	}
 
     private void OnTriggerEnter(Collider other)
@@ -42,13 +49,16 @@ public class Enemy : MonoBehaviour {
         if(bullet != null && bullet.gun.charge == this.charge) {
             Destroy(bullet.gameObject);
             Die();
+            return;
         }
     }
 
-    void Die()
+    public void Die()
     {
-        target = null;
-        var explosion = Instantiate(explodenemy, transform.position, Quaternion.identity);
+        dead = true;
+        var playerDirection = (target.transform.position - transform.position).normalized;
+        var explosion = Instantiate(explodenemy, transform.position + playerDirection * 1f, Quaternion.identity) as GameObject;
+        Destroy(explosion, 2f);
         StartCoroutine(DestroyGO());
     }
 
