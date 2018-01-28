@@ -103,7 +103,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &65484544091708260
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -114,7 +114,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.124476, y: 2.124476, z: 4.514011}
+  m_Size: {x: 3, y: 3, z: 6}
   m_Center: {x: 0, y: 0, z: 1.1381435}
 --- !u!95 &95824783238989364
 Animator:
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055a9c304ef794ad282ec09ffaa48083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 1
   direction: {x: 0, y: 0, z: 0}
   gun: {fileID: 0}
 --- !u!198 &198738301054191064

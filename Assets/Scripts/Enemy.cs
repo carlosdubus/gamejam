@@ -30,7 +30,8 @@ public class Enemy : MonoBehaviour
     {
         if (dead)
         {
-            transform.localScale -= Vector3.one * Time.deltaTime;
+            //transform.localScale -= Vector3.one * Time.deltaTime;
+            transform.localScale = Vector3.MoveTowards(transform.localScale, Vector3.zero, Time.deltaTime);
             return;
         }
         if (target == null)
@@ -42,7 +43,7 @@ public class Enemy : MonoBehaviour
         var oldPos = transform.position;
         pos += direction * speed * Time.deltaTime;
         transform.position = pos + (sinAxis * Mathf.Sin(Time.time * sinFrequency) * sinMagnitude);
-        if (once == false) { transform.LookAt(target.transform); once = true; }
+        transform.LookAt(target.transform);
         child.transform.rotation = Quaternion.LookRotation(transform.position - oldPos);
 
         //if(Vector3.Distance(transform.position, target.transform.position) < 1f) {
