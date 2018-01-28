@@ -743,15 +743,15 @@ Prefab:
       objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 4087166409069848, guid: 68268097d71405244a3a99393ff94688, type: 2}
       propertyPath: m_LocalScale.x
-      value: 5.5106654
+      value: 4.3644466
       objectReference: {fileID: 0}
     - target: {fileID: 4087166409069848, guid: 68268097d71405244a3a99393ff94688, type: 2}
       propertyPath: m_LocalScale.y
-      value: 10.555013
+      value: 8.336379
       objectReference: {fileID: 0}
     - target: {fileID: 4087166409069848, guid: 68268097d71405244a3a99393ff94688, type: 2}
       propertyPath: m_LocalScale.z
-      value: 5.5106664
+      value: 4.364447
       objectReference: {fileID: 0}
     - target: {fileID: 4087166409069848, guid: 68268097d71405244a3a99393ff94688, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
