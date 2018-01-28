@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114097765257750440}
   - component: {fileID: 199817650900567812}
   m_Layer: 0
-  m_Name: Base
+  m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1476443086320610}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.23037148, y: 13.92, z: 24.44}
+  m_LocalPosition: {x: -12.58049, y: 14.6609, z: -14.458152}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4923478444892488}
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  time: 4
+  time: 2.5
 --- !u!114 &114097765257750440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  time: 4
+  time: 2.5
 --- !u!114 &114266206245842006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  time: 4
+  time: 2.5
 --- !u!114 &114488160684359438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  time: 4
+  time: 2.5
 --- !u!114 &114612818051591774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  time: 4
+  time: 2.5
 --- !u!198 &198212522362414926
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -295,7 +295,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1563306320
+  randomSeed: 1621008286
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3656,7 +3656,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -587005774
+  randomSeed: -190293186
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3746,7 +3746,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.1544118, g: 0.1544118, b: 0.1544118, a: 0.422}
+      maxColor: {r: 0.1544118, g: 0.1544118, b: 0.1544118, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4051,8 +4051,8 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    randomizeRotationDirection: 0
-    maxNumParticles: 1
+    randomizeRotationDirection: 1
+    maxNumParticles: 3
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -7017,7 +7017,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1698572329
+  randomSeed: 1994362630
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10378,7 +10378,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -697244767
+  randomSeed: 1713590501
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -13739,7 +13739,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1117518666
+  randomSeed: -334604835
   InitialModule:
     serializedVersion: 3
     enabled: 1

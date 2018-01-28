@@ -15,6 +15,11 @@ public class Enemy : MonoBehaviour
     bool once = false;
     public GameObject child;
     public AudioSource locationSound;
+    public GameObject portalPrefab;
+    public float portalDistance = 10f;
+    GameObject portal;
+    float initDelay = 2f;
+    public bool RL;
 
     Vector3 pos;
 
@@ -24,27 +29,43 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         pos = transform.position;
+        child.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        if (target == null)
+        {
+            return;
+        }
+        transform.LookAt(target.transform);
+        var direction = (target.transform.position - transform.position).normalized;
+        if (portal == null)
+        {
+            portal = Instantiate<GameObject>(portalPrefab, transform.position + direction * portalDistance, Quaternion.identity);
+        }
+        
+        initDelay -= Time.deltaTime;
+        if (initDelay > 0f)
+        {
+            return;
+        }
+        child.SetActive(true);  
+        
         if (dead)
         {
             //transform.localScale -= Vector3.one * Time.deltaTime;
             transform.localScale = Vector3.MoveTowards(transform.localScale, Vector3.zero, Time.deltaTime);
             return;
         }
-        if (target == null)
-        {
-            return;
-        }
-        var direction = (target.transform.position - transform.position).normalized;
-        sinAxis = transform.right;
+
+        if (RL == true) { sinAxis = transform.right; } else { sinAxis = transform.up; }
         var oldPos = transform.position;
         pos += direction * speed * Time.deltaTime;
         transform.position = pos + (sinAxis * Mathf.Sin(Time.time * sinFrequency) * sinMagnitude);
-        transform.LookAt(target.transform);
+       
         child.transform.rotation = Quaternion.LookRotation(transform.position - oldPos);
 
         //if(Vector3.Distance(transform.position, target.transform.position) < 1f) {
@@ -80,6 +101,7 @@ public class Enemy : MonoBehaviour
 
     void OnDrawGizmos()
     {
+        //return;
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(transform.position, 2f);
     }

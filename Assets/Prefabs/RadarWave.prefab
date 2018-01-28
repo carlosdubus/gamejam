@@ -71,6 +71,7 @@ MonoBehaviour:
   maxRadius: 50
   duration: 2
   collider: {fileID: 135953710050746272}
+  sound: {fileID: 1793641393753450, guid: 6f610aa2f557e8843bb8369a2a744a12, type: 2}
 --- !u!135 &135953710050746272
 SphereCollider:
   m_ObjectHideFlags: 1

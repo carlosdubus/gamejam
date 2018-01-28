@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PortalSize : MonoBehaviour {
 
-    Vector3 size = new Vector3(8, 8, 8);
+    Vector3 size = new Vector3(4, 4, 4);
     Vector3 velocity;
     public float speed;
-    public float time = 4f;
+    public float time;
 
     // Update is called once per frame
 
@@ -15,6 +15,7 @@ public class PortalSize : MonoBehaviour {
     {
         transform.localScale = Vector3.zero;
     }
+
     void Update()
     {
 
@@ -24,7 +25,7 @@ public class PortalSize : MonoBehaviour {
         }
         else
         {
-            transform.localScale = Vector3.SmoothDamp(transform.localScale, Vector3.zero, ref velocity, Time.deltaTime * speed / 3);
+            transform.localScale = Vector3.SmoothDamp(transform.localScale, Vector3.zero, ref velocity, Time.deltaTime * speed / 2);
         }
 
         time -= Time.deltaTime;

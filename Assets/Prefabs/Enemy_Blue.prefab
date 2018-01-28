@@ -846,7 +846,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1259787725818108}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 72d0380cb0f929246b5aea7a28f9e61a, type: 3}
@@ -993,6 +993,11 @@ MonoBehaviour:
   explodenemy: {fileID: 1542980141802770, guid: 8549e9ecc623ed84d83b998600499a40,
     type: 2}
   child: {fileID: 1495045884318072}
+  locationSound: {fileID: 0}
+  portalPrefab: {fileID: 1476443086320610, guid: 8ac93ff8612a84343ad62bff8003c3b9,
+    type: 2}
+  portalDistance: 0.2
+  RL: 1
 --- !u!198 &198717403916058230
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1012,7 +1017,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 3
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -1053,7 +1058,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1523176162
+  randomSeed: 1730576552
   InitialModule:
     serializedVersion: 3
     enabled: 1

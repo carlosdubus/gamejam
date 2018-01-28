@@ -15,7 +15,7 @@ public class ClockText : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        time = Mathf.Clamp(time, 0f, 20f);
+        time = Mathf.Clamp(time, 0f, 300f);
 
         var minutes = Mathf.Floor(time / 60f);
         var seconds = (int)time % 60;

@@ -7,6 +7,7 @@ public class RadarWave : MonoBehaviour
     public float maxRadius = 50f;
     public float duration = 2f;
     public SphereCollider collider;
+    public GameObject sound;
 
     // Use this for initialization
     void Start()
@@ -29,8 +30,14 @@ public class RadarWave : MonoBehaviour
     {
         var enemy = other.GetComponent<Enemy>();
         if(enemy != null) {
-            enemy.locationSound.Play();
+            CreateSoundOn(enemy.transform.position);
         }
+    }
+
+    void CreateSoundOn(Vector3 position)
+    {
+        var go = Instantiate<GameObject>(sound, position, Quaternion.identity);
+        Destroy(go, 5f);
     }
 
     void OnDrawGizmos()

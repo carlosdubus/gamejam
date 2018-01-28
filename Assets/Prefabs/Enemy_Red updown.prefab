@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 65729408266388062}
   - component: {fileID: 82542571298773070}
   m_Layer: 0
-  m_Name: Enemy_Red
+  m_Name: Enemy_Red updown
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -997,7 +997,6 @@ MonoBehaviour:
   portalPrefab: {fileID: 1476443086320610, guid: 8ac93ff8612a84343ad62bff8003c3b9,
     type: 2}
   portalDistance: 5
-  RL: 1
 --- !u!198 &198638619363306092
 ParticleSystem:
   m_ObjectHideFlags: 1
